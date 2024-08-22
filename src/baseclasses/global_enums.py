@@ -1,6 +1,6 @@
 from enum import Enum
 
-
+# branch Terminal
 class GlobalErrorMesages(Enum):
     WRONG_STATUS_CODE = "Eхxpected status code not equal 200"
     WRONG_FIELD_COLOR_IN_SCHEMA = 'Field color not contains #'
