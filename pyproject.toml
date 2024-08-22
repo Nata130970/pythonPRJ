@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "test"
+version = "0.1.0"
+description = ""
+authors = ["Кирилл Заяц <kzayats@gis365by.onmicrosoft.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = "^1.0.1"
+numpy = "^1.26.4"
+pandas = "^2.2.2"
+xarray = "^2024.5.0"
+pydantic-settings = "^2.2.1"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.30"}
+asyncstdlib = "^3.12.3"
+asyncpg = "^0.29.0"
+requests = "^2.32.1"
+pytest = "^8.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
