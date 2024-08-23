@@ -15,6 +15,7 @@ def test_get_presented_days():
 
 
 def test_get_palette():
+
     r = requests.get(SERVICE_URL + 'get_palette')
     resp=Response(r)
     resp.assert_status_code([200,201]).validate(ColorMap)
