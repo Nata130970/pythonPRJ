@@ -1,6 +1,6 @@
 from pydantic import BaseModel, field_validator
 from pydantic.color import Color
-from src.baseclasses.global_enums import GlobalErrorMesages
+from test.baseclasses import GlobalErrorMesages
 
 
 class Map(BaseModel):

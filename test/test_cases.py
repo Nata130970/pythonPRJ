@@ -2,9 +2,8 @@ import random
 from datetime import datetime, timedelta
 
 import requests
-
-from baseclasses.response import Response
-from schemas.schema import *
+from test.baseclasses import GlobalErrorMesages,Response
+from test.schemas import Map, ColorMap
 
 SERVICE_URL = "https://rmkop-test.gis.by/api/"
 
@@ -21,7 +20,9 @@ def test_get_palette():
     resp.assert_status_code([200,201]).validate(ColorMap)
 
 def test_get_map():
-
+    """
+    Test get_map checking code status and schema response
+    """
     testDate = (datetime.today() - timedelta(days=random.randint(1, 5))).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3]
     r = requests.get(url=SERVICE_URL + 'get_map?datetime=' + testDate)
     resp = Response(r)
